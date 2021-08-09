@@ -1,9 +1,6 @@
-package com.example.demo.controllers;
-
-import java.util.Optional;
+package com.example.demo.controllerTests;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +15,12 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -27,6 +30,12 @@ public class UserController {
 	
 	@Autowired
 	private CartRepository cartRepository;
+
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	Logger log = LoggerFactory.getLogger(UserController.class);
+
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -43,9 +52,16 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+		log.info("Creating user {}", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
+		if (createUserRequest.getPassword().length() < 6 ||
+				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+			log.debug("Error with your password. Cannot create user {}", createUserRequest.getUsername());
+			return ResponseEntity.badRequest().build();
+		}
+		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
 		return ResponseEntity.ok(user);
 	}
