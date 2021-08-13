@@ -1,4 +1,4 @@
-package com.example.demo.controllerTests;
+package com.example.demo.controllers;
 
 import com.example.demo.TestUtils;
 import com.example.demo.model.persistence.User;
@@ -7,6 +7,7 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.junit.Before;
 import org.junit.Test;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -22,6 +23,8 @@ public class UserControllerTests {
     private UserRepository userRepository = mock(UserRepository.class);
     private CartRepository cartRepository = mock(CartRepository.class);
     private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
+
+
 
 
     @Before

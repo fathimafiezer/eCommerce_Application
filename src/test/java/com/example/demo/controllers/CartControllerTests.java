@@ -1,4 +1,4 @@
-package com.example.demo.controllerTests;
+package com.example.demo.controllers;
 
 import com.example.demo.TestUtils;
 import com.example.demo.model.persistence.Cart;
