@@ -1,0 +1,59 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2021-08-12 08:00:25.992  INFO 13248 --- [           main] c.e.d.SareetaApplication                 : Starting SareetaApplication on LAPTOP-RQJ09FIM with PID 13248 (started by hp in C:\Users\Fathima\Udacity\FINAL PROJECT FOLDER\PROJECT 4\nd035-c4-Security-and-DevOps-master\starter_code)
+2021-08-12 08:00:25.999  INFO 13248 --- [           main] c.e.d.SareetaApplication                 : No active profile set, falling back to default profiles: default
+2021-08-12 08:00:26.250  WARN 13248 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-08-12 08:00:27.341  INFO 13248 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-12 08:00:27.465  INFO 13248 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 4 repository interfaces.
+2021-08-12 08:00:28.162  INFO 13248 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84da9648] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-12 08:00:28.905  INFO 13248 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-08-12 08:00:28.957  INFO 13248 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-08-12 08:00:28.958  INFO 13248 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-08-12 08:00:29.498  INFO 13248 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-08-12 08:00:29.498  INFO 13248 --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 3273 ms
+2021-08-12 08:00:29.934  INFO 13248 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-08-12 08:00:30.338  INFO 13248 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-08-12 08:00:30.500  INFO 13248 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-12 08:00:30.952  INFO 13248 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-12 08:00:30.954  INFO 13248 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2021-08-12 08:00:32.119  INFO 13248 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-12 08:00:32.704  INFO 13248 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-12 08:00:34.512  INFO 13248 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-12 08:00:35.475  WARN 13248 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-12 08:00:35.568  INFO 13248 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@559d19c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a6da47a, org.springframework.security.web.header.HeaderWriterFilter@a323a5b, org.springframework.web.filter.CorsFilter@719c1faf, org.springframework.security.web.authentication.logout.LogoutFilter@1a7163e3, com.example.demo.security.JWTAuthenticationFilter@6ba6557e, com.example.demo.security.JWTAuthenticationVerficationFilter@1f172892, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f642bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49ced9c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5409dfdd, org.springframework.security.web.session.SessionManagementFilter@ad0bb4e, org.springframework.security.web.access.ExceptionTranslationFilter@fe8aaeb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62b0bf85]
+2021-08-12 08:00:35.696  INFO 13248 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-12 08:00:35.876  INFO 13248 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-12 08:00:35.879  INFO 13248 --- [           main] c.e.d.SareetaApplication                 : Started SareetaApplication in 13.0161207 seconds (JVM running for 19.498)
+2021-08-12 08:23:13.612  INFO 13248 --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-12 08:23:13.613  INFO 13248 --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-08-12 08:23:13.623  INFO 13248 --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 10 ms
+2021-08-12 08:23:13.948  INFO 13248 --- [nio-8080-exec-2] c.e.d.c.UserController                   : Creating user Udacity
+2021-08-12 08:23:14.115  INFO 13248 --- [nio-8080-exec-2] c.e.d.c.UserController                   : Created user Udacity
+2021-08-12 08:23:24.203  INFO 13248 --- [nio-8080-exec-3] c.e.d.c.UserController                   : Creating user Fathima
+2021-08-12 08:23:24.205  INFO 13248 --- [nio-8080-exec-3] c.e.d.c.UserController                   : Created user Fathima
+2021-08-12 08:23:34.173  INFO 13248 --- [nio-8080-exec-4] c.e.d.c.UserController                   : Creating user Fiezer
+2021-08-12 08:23:34.175  INFO 13248 --- [nio-8080-exec-4] c.e.d.c.UserController                   : Created user Fiezer
+2021-08-12 10:32:09.977  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m7s920ms808탎).
+2021-08-12 11:43:25.644  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m14s682ms164탎500ns).
+2021-08-12 14:24:34.148  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30m37s399ms929탎200ns).
+2021-08-12 16:40:32.227  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m26s478ms776탎200ns).
+2021-08-12 17:07:18.614  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s42ms248탎800ns).
+2021-08-12 18:39:41.174  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h2m22s42ms311탎900ns).
+2021-08-12 20:41:25.197  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h14m43s160ms123탎400ns).
+2021-08-12 21:28:05.802  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=26m39s841ms995탎900ns).
+2021-08-12 23:19:59.066  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m52s478ms197탎).
+2021-08-13 00:04:58.694  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m59s136ms505탎100ns).
+2021-08-13 00:21:25.537  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m56s317ms131탎900ns).
+2021-08-13 00:30:29.745  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m1s396ms600탎300ns).
+2021-08-13 00:53:42.203  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m12s204ms454탎800ns).
+2021-08-13 01:17:39.017  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m56s510ms712탎100ns).
+2021-08-13 07:11:30.654  WARN 13248 --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h38m48s167ms327탎).
