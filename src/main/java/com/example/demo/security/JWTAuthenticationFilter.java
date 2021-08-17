@@ -59,8 +59,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     protected void successfulAuthentication(HttpServletRequest req,
                                             HttpServletResponse res,
                                             FilterChain chain,
-                                            Authentication auth) throws IOException, ServletException, HttpClientErrorException{
-        try {
+                                            Authentication auth) throws IOException, ServletException{
 
             String token = JWT.create()
                     .withSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
@@ -68,9 +67,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                     .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
             res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
             log.info("Login Successful");
-        }catch(Exception e){
-            throw new HttpClientErrorException(HttpStatus.UNAUTHORIZED);
-        }
+
 
     }
 }
